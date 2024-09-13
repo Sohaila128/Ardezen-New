@@ -1,0 +1,161 @@
+@import "variables";
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $primaryColor;
+  }
+}
+
+// Change default Bootstrap navbar toggler from dark to a different color
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow-x: hidden;
+  font-family: "Gothic A1", sans-serif !important;
+}
+
+// Start header
+header {
+  border-bottom: 1px solid $bgColor;
+}
+
+header nav ul li a {
+  &::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: $primaryColor;
+    transition: 0.5s;
+    margin: auto;
+    display: block;
+  }
+  &:hover::after {
+    width: 100%;
+    color: black; 
+  }
+}
+
+// Full-width offcanvas for smaller screens
+.offcanvas-end {
+  min-width: 100% !important;
+}
+
+// Font size utility classes
+.fs-7-5 {
+  font-size: 7.5px !important;
+}
+.fs-12 {
+  font-size: 12px !important;
+}
+.fs-14 {
+  font-size: 14px !important;
+}
+.fs-8-5 {
+  font-size: 8px !important;
+}
+
+// Table styling
+.table th, .table td {
+  border-top: none;
+  vertical-align: middle;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.table th {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.table tbody tr:last-child td {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.btn-close.text-secondary {
+  color: white !important; 
+}
+
+.btn-close {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%) !important;
+}
+// Text color utility classes
+.text-gray {
+  color: #7E7E7E !important;
+}
+.text-white-two {
+  color: #A1A1A1 !important;
+}
+.contact-text {
+  color: #CCCCCC !important;
+}
+.nav-text {
+  color: #AAAAAA !important;
+}
+
+// Adjust scroll padding for fixed navbar
+body {
+  scroll-padding-top: 170px !important; 
+}
+
+// Border utility class
+.border-neutral-800 {
+  border-bottom: 1px solid #333333 !important;
+}
+
+// Back-to-top button styling
+.back-to-top {
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  bottom: 20px;
+  right: 10px;
+  background-color: $primaryColor;
+  color: #FFF;
+  border-radius: 50px;
+  font-size: 20px !important;
+  display: none;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+
+  img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(162deg) brightness(101%) contrast(104%);
+  }
+}
+
+.btn-phone i {
+  line-height: 1;
+}
+
+// WhatsApp button styling
+.whats-app {
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  bottom: 70px;
+  right: 10px;
+  background-color: $primaryColor;
+  color: #FFF;
+  align-items: center;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 23px;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none !important;
+}
